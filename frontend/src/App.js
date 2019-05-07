@@ -5,15 +5,14 @@ import Nav from './components/Nav';
 import Splash from './components/Splash'
 import Footer from './components/Footer'
 
-function App() {
-  return (
-    <div className="App">
+export default class App extends React.Component {
+  render (){
+    return (
+      <div className="App">
       <Nav />
       <Splash />
-     {/*  OR <MainComponent /> */}
       <Footer />
-    </div>
-  );
+      </div>
+    )
+  }
 }
-
-export default App;
