@@ -4,8 +4,11 @@ import CourseSearch from './CourseSearch';
 export default class Profiler extends Component {
 
     render() {
+
+        const { handleSearchClick } = this.props
+
         return (
-            <CourseSearch />
+            <CourseSearch handleSearchClick={ handleSearchClick } />
         );
     }
 }
