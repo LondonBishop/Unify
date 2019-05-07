@@ -20,13 +20,18 @@ export default class MainContainer extends Component {
   }
 
 
+    handleSearchClick = (searchTerm) => {
 
-  render() {
-    return (
-      <div>
-        <Profiler />
-        <SearchResults universities={this.state.universities}/>
-      </div>
-    );
-  }
+        fetch("")
+            .then( resp => resp.json() )
+            .then( data => console.log("handleSearchClick") )
+    }
+
+    render() {
+        return (
+            <Profiler handleSearchClick={ this.handleSearchClick } />
+             <SearchResults universities={this.state.universities}/>
+        );
+    }
+
 }
