@@ -4,8 +4,6 @@ import './App.css';
 import Nav from './components/Nav';
 import Splash from './components/Splash'
 import Footer from './components/Footer'
-import 'semantic-ui-css/semantic.min.css'
-
 
 function App() {
   return (
