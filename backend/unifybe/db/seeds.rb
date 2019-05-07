@@ -26,6 +26,7 @@ universities = [
   { name: 'University of Liverpool', location: 'Liverpool' },
   { name: 'University of Westminster', location: 'London' }
 ]
+
 University.create(universities)
 
 courses = [
@@ -71,6 +72,176 @@ subjects = [
 ]
 
 Subject.create(subjects)
+# university courses
+
+university_courses = [
+  { university_id: 1, course_id: 2 },
+  { university_id: 1, course_id: 3 },
+  { university_id: 1, course_id: 4 },
+  { university_id: 1, course_id: 5 },
+  { university_id: 1, course_id: 6 },
+  { university_id: 1, course_id: 7 },
+  { university_id: 1, course_id: 8 },
+  { university_id: 1, course_id: 9 },
+
+  { university_id: 2, course_id: 1 },
+  { university_id: 2, course_id: 2 },
+  { university_id: 2, course_id: 3 },
+  { university_id: 2, course_id: 4 },
+  { university_id: 2, course_id: 5 },
+  { university_id: 2, course_id: 7 },
+  { university_id: 2, course_id: 8 },
+  { university_id: 2, course_id: 9 },
+
+  { university_id: 3, course_id: 1 },
+  { university_id: 3, course_id: 2 },
+  { university_id: 3, course_id: 3 },
+  { university_id: 3, course_id: 4 },
+  { university_id: 3, course_id: 5 },
+  { university_id: 3, course_id: 7 },
+  { university_id: 3, course_id: 8 },
+  { university_id: 3, course_id: 9 },
+
+  { university_id: 4, course_id: 1 },
+  { university_id: 4, course_id: 3 },
+  { university_id: 4, course_id: 4 },
+  { university_id: 4, course_id: 7 },
+  { university_id: 4, course_id: 8 },
+  { university_id: 4, course_id: 9 },
+
+  { university_id: 5, course_id: 1 },
+  { university_id: 5, course_id: 3 },
+  { university_id: 5, course_id: 5 },
+  { university_id: 5, course_id: 8 },
+  { university_id: 5, course_id: 9 },
+
+  { university_id: 6, course_id: 1 },
+  { university_id: 6, course_id: 3 },
+  { university_id: 6, course_id: 5 },
+  { university_id: 6, course_id: 6 },
+  { university_id: 6, course_id: 7 },
+  { university_id: 6, course_id: 8 },
+  { university_id: 6, course_id: 9 },
+
+  { university_id: 7, course_id: 1 },
+  { university_id: 7, course_id: 2 },
+  { university_id: 7, course_id: 3 },
+  { university_id: 7, course_id: 4 },
+  { university_id: 7, course_id: 5 },
+  { university_id: 7, course_id: 7 },
+  { university_id: 7, course_id: 8 },
+  { university_id: 7, course_id: 9 },
+
+  { university_id: 8, course_id: 2 },
+  { university_id: 8, course_id: 3 },
+  { university_id: 8, course_id: 5 },
+  { university_id: 8, course_id: 7 },
+  { university_id: 8, course_id: 8 },
+  { university_id: 8, course_id: 9 },
+
+  { university_id: 9, course_id: 3 },
+  { university_id: 9, course_id: 4 },
+  { university_id: 9, course_id: 5 },
+  { university_id: 9, course_id: 7 },
+  { university_id: 9, course_id: 8 },
+
+  { university_id: 10, course_id: 1 },
+  { university_id: 10, course_id: 2 },
+  { university_id: 10, course_id: 3 },
+  { university_id: 10, course_id: 4 },
+  { university_id: 10, course_id: 5 },
+  { university_id: 10, course_id: 6 },
+  { university_id: 10, course_id: 7 },
+  { university_id: 10, course_id: 8 },
+  { university_id: 10, course_id: 9 },
+
+  { university_id: 11, course_id: 2 },
+  { university_id: 11, course_id: 3 },
+  { university_id: 11, course_id: 5 },
+  { university_id: 11, course_id: 7 },
+  { university_id: 11, course_id: 8 },
+
+  { university_id: 12, course_id: 1 },
+  { university_id: 12, course_id: 3 },
+  { university_id: 12, course_id: 5 },
+  { university_id: 12, course_id: 7 },
+  { university_id: 12, course_id: 8 },
+  { university_id: 12, course_id: 9 },
+
+  { university_id: 13, course_id: 7 },
+  { university_id: 13, course_id: 8 },
+  { university_id: 13, course_id: 9 },
+
+  { university_id: 14, course_id: 1 },
+  { university_id: 14, course_id: 2 },
+  { university_id: 14, course_id: 3 },
+  { university_id: 14, course_id: 4 },
+  { university_id: 14, course_id: 5 },
+  { university_id: 14, course_id: 6 },
+  { university_id: 14, course_id: 7 },
+  { university_id: 14, course_id: 8 },
+
+  { university_id: 15, course_id: 1 },
+  { university_id: 15, course_id: 3 },
+  { university_id: 15, course_id: 4 },
+  { university_id: 15, course_id: 5 },
+  { university_id: 15, course_id: 6 },
+  { university_id: 15, course_id: 7 },
+  { university_id: 15, course_id: 8 },
+  { university_id: 15, course_id: 9 },
+
+  { university_id: 16, course_id: 3 },
+  { university_id: 16, course_id: 4 },
+  { university_id: 16, course_id: 5 },
+  { university_id: 16, course_id: 6 },
+  { university_id: 16, course_id: 7 },
+  { university_id: 16, course_id: 8 },
+  { university_id: 16, course_id: 9 },
+
+  { university_id: 17, course_id: 3 },
+  { university_id: 17, course_id: 4 },
+  { university_id: 17, course_id: 5 },
+  { university_id: 17, course_id: 6 },
+  { university_id: 17, course_id: 7 },
+  { university_id: 17, course_id: 8 },
+  { university_id: 17, course_id: 9 },
+
+  { university_id: 18, course_id: 3 },
+  { university_id: 18, course_id: 6 },
+  { university_id: 18, course_id: 7 },
+  { university_id: 18, course_id: 8 },
+
+  { university_id: 19, course_id: 5 },
+  { university_id: 19, course_id: 7 },
+  { university_id: 19, course_id: 8 },
+  { university_id: 19, course_id: 9 },
+
+  { university_id: 20, course_id: 2 },
+  { university_id: 20, course_id: 3 },
+  { university_id: 20, course_id: 5 },
+  { university_id: 20, course_id: 6 },
+  { university_id: 20, course_id: 7 },
+  { university_id: 20, course_id: 8 },
+  { university_id: 20, course_id: 9 },
+
+  { university_id: 21, course_id: 1 },
+  { university_id: 21, course_id: 2 },
+  { university_id: 21, course_id: 3 },
+  { university_id: 21, course_id: 4 },
+  { university_id: 21, course_id: 5 },
+  { university_id: 21, course_id: 6 },
+  { university_id: 21, course_id: 7 },
+  { university_id: 21, course_id: 8 },
+  { university_id: 21, course_id: 9 },
+
+  { university_id: 22, course_id: 2 },
+  { university_id: 22, course_id: 3 },
+  { university_id: 22, course_id: 5 },
+  { university_id: 22, course_id: 6 },
+  { university_id: 22, course_id: 9 }
+]
+
+UniversityCourse.create(university_courses)
 
 university_course_subjects = [
   # university of Bath university_id: 1
@@ -441,39 +612,161 @@ university_course_subjects = [
   # English course_id: 5 NA
   # Architecture course_id: 6 NA
   # Economics course_id: 7
-  { university_id: 1, course_id: 7, subject_id: nil, grade: 'A*' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 13, course_id: 7, subject_id: nil, grade: 'B' },
+  { university_id: 13, course_id: 7, subject_id: nil, grade: 'C' },
+  { university_id: 13, course_id: 7, subject_id: nil, grade: 'C' },
   # Mathematics course_id: 8
-  { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
+  { university_id: 13, course_id: 8, subject_id: 1, grade: 'B' },
+  { university_id: 13, course_id: 8, subject_id: nil, grade: 'C' },
+  { university_id: 13, course_id: 8, subject_id: nil, grade: 'C' },
   # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' },
+  { university_id: 13, course_id: 9, subject_id: 8, grade: 'B' },
+  { university_id: 13, course_id: 9, subject_id: nil, grade: 'C' },
+  { university_id: 13, course_id: 9, subject_id: nil, grade: 'C' },
 
-  # Nottingham university_id: 10
+  # Brighton university_id: 14
   # medicine course_id: 1
-  { university_id: 10, course_id: 1, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 6, grade: 'A' },
+  { university_id: 14, course_id: 1, subject_id: nil, grade: 'A' },
+  { university_id: 14, course_id: 1, subject_id: 4, grade: 'A' },
+  { university_id: 14, course_id: 1, subject_id: 6, grade: 'A' },
   # business Management course_id: 2
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'B' },
+  { university_id: 14, course_id: 2, subject_id: nil, grade: 'C' },
+  { university_id: 14, course_id: 2, subject_id: nil, grade: 'C' },
+  { university_id: 14, course_id: 2, subject_id: nil, grade: 'C' },
+  # computer science course_id: 3
+  { university_id: 14, course_id: 3, subject_id: nil, grade: 'C' },
+  { university_id: 14, course_id: 3, subject_id: nil, grade: 'C' },
+  { university_id: 14, course_id: 3, subject_id: nil, grade: 'C' },
+  # Pharmacology course_id: 4
+  { university_id: 14, course_id: 4, subject_id: 4, grade: 'B' },
+  { university_id: 14, course_id: 4, subject_id: nil, grade: 'B' },
+  { university_id: 14, course_id: 4, subject_id: nil, grade: 'B' },
+  # English course_id: 5
+  { university_id: 14, course_id: 5, subject_id: nil, grade: 'C' },
+  { university_id: 14, course_id: 5, subject_id: nil, grade: 'C' },
+  { university_id: 14, course_id: 5, subject_id: 3, grade: 'C' },
+  # Architecture course_id: 6
+  { university_id: 14, course_id: 6, subject_id: nil, grade: 'B' },
+  { university_id: 14, course_id: 6, subject_id: nil, grade: 'B' },
+  { university_id: 14, course_id: 6, subject_id: nil, grade: 'B' },
+  # Economics course_id: 7
+  { university_id: 14, course_id: 7, subject_id: nil, grade: 'B' },
+  { university_id: 14, course_id: 7, subject_id: nil, grade: 'B' },
+  { university_id: 14, course_id: 7, subject_id: nil, grade: 'C' },
+  # Mathematics course_id: 8
+  { university_id: 14, course_id: 8, subject_id: 1, grade: 'B' },
+  { university_id: 14, course_id: 8, subject_id: nil, grade: 'B' },
+  { university_id: 14, course_id: 8, subject_id: nil, grade: 'C' },
+  # History course_id: 9 NA
+
+  # UCL university_id: 15
+  # medicine course_id: 1
+  { university_id: 15, course_id: 1, subject_id: nil, grade: 'A*' },
+  { university_id: 15, course_id: 1, subject_id: 4, grade: 'A' },
+  { university_id: 15, course_id: 1, subject_id: 6, grade: 'A' },
+  # business Management course_id: 2 NA
+  # computer science course_id: 3
+  { university_id: 15, course_id: 3, subject_id: 1, grade: 'A*' },
+  { university_id: 15, course_id: 3, subject_id: nil, grade: 'A*' },
+  { university_id: 15, course_id: 3, subject_id: nil, grade: 'A' },
+  # Pharmacology course_id: 4
+  { university_id: 15, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 4, subject_id: 4, grade: 'B' },
+  # English course_id: 5
+  { university_id: 15, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 5, subject_id: 3, grade: 'A' },
+  # Architecture course_id: 6
+  { university_id: 15, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 6, subject_id: nil, grade: 'B' },
+  # Economics course_id: 7
+  { university_id: 15, course_id: 7, subject_id: 1, grade: 'A*' },
+  { university_id: 15, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 7, subject_id: nil, grade: 'A' },
+  # Mathematics course_id: 8
+  { university_id: 15, course_id: 8, subject_id: 1, grade: 'A*' },
+  { university_id: 15, course_id: 8, subject_id: 2, grade: 'A*' },
+  { university_id: 15, course_id: 8, subject_id: nil, grade: 'A' },
+  # History course_id: 9
+  { university_id: 15, course_id: 9, subject_id: 8, grade: 'A' },
+  { university_id: 15, course_id: 9, subject_id: nil, grade: 'A' },
+  { university_id: 15, course_id: 9, subject_id: nil, grade: 'A' },
+
+  # Reading university_id: 16
+  # medicine course_id: 1 NA
+  # business Management course_id: 2 NA
+  # computer science course_id: 3
+  { university_id: 16, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 3, subject_id: nil, grade: 'A' },
+  # Pharmacology course_id: 4
+  { university_id: 16, course_id: 4, subject_id: 4, grade: 'A' },
+  { university_id: 16, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 4, subject_id: nil, grade: 'A' },
+  # English course_id: 5
+  { university_id: 16, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 5, subject_id: 3, grade: 'B' },
+  # Architecture course_id: 6
+  { university_id: 16, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 6, subject_id: 1, grade: 'A' },
+  { university_id: 16, course_id: 6, subject_id: nil, grade: 'A' },
+  # Economics course_id: 7
+  { university_id: 16, course_id: 7, subject_id: nil, grade: 'A*' },
+  { university_id: 16, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 7, subject_id: nil, grade: 'A' },
+  # Mathematics course_id: 8
+  { university_id: 16, course_id: 8, subject_id: 1, grade: 'A' },
+  { university_id: 16, course_id: 8, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 8, subject_id: nil, grade: 'B' },
+  # History course_id: 9
+  { university_id: 16, course_id: 9, subject_id: 1, grade: 'A' },
+  { university_id: 16, course_id: 9, subject_id: nil, grade: 'A' },
+  { university_id: 16, course_id: 9, subject_id: nil, grade: 'B' },
+
+  # De Montfort university_id: 17
+  # medicine course_id: 1 NA
+  # business Management course_id: 2 NA
+  # computer science course_id: 3
+  { university_id: 17, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 3, subject_id: nil, grade: 'A' },
+  # Pharmacology course_id: 4
+  { university_id: 17, course_id: 4, subject_id: 4, grade: 'A' },
+  { university_id: 17, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 4, subject_id: nil, grade: 'A' },
+  # English course_id: 5
+  { university_id: 17, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 5, subject_id: 3, grade: 'B' },
+  # Architecture course_id: 6
+  { university_id: 17, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 6, subject_id: 1, grade: 'A' },
+  { university_id: 17, course_id: 6, subject_id: nil, grade: 'A' },
+  # Economics course_id: 7
+  { university_id: 17, course_id: 7, subject_id: nil, grade: 'A*' },
+  { university_id: 17, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 7, subject_id: nil, grade: 'A' },
+  # Mathematics course_id: 8
+  { university_id: 17, course_id: 8, subject_id: 1, grade: 'A' },
+  { university_id: 17, course_id: 8, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 8, subject_id: nil, grade: 'B' },
+  # History course_id: 9
+  { university_id: 17, course_id: 9, subject_id: 1, grade: 'A' },
+  { university_id: 17, course_id: 9, subject_id: nil, grade: 'A' },
+  { university_id: 17, course_id: 9, subject_id: nil, grade: 'B' },
+
+  # London Metropolitan university_id: 18
+  # medicine course_id: 1 NA
+  # business Management course_id: 2 NA
   # computer science course_id: 3
   { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
   { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
   { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  # Pharmacology course_id: 4
-  { university_id: 10, course_id: 4, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  # English course_id: 5
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: 3, grade: 'B' },
+  # Pharmacology course_id: 4 NA
+  # English course_id: 5 NA
   # Architecture course_id: 6
   { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
   { university_id: 10, course_id: 6, subject_id: 1, grade: 'A' },
@@ -486,238 +779,125 @@ university_course_subjects = [
   { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
   { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
   { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
-  # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' },
+  # History course_id: 9 NA
 
-  # Nottingham university_id: 10
-  # medicine course_id: 1
-  { university_id: 10, course_id: 1, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 6, grade: 'A' },
-  # business Management course_id: 2
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'B' },
-  # computer science course_id: 3
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  # Pharmacology course_id: 4
-  { university_id: 10, course_id: 4, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
+  # Birkbeck university_id: 19
+  # medicine course_id: 1 NA
+  # business Management course_id: 2 NA
+  # computer science course_id: 3 NA
+  # Pharmacology course_id: 4 NA
   # English course_id: 5
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: 3, grade: 'B' },
-  # Architecture course_id: 6
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 19, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 19, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 19, course_id: 5, subject_id: 3, grade: 'B' },
+  # Architecture course_id: 6 NA
   # Economics course_id: 7
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A*' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 19, course_id: 7, subject_id: nil, grade: 'A*' },
+  { university_id: 19, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 19, course_id: 7, subject_id: nil, grade: 'A' },
   # Mathematics course_id: 8
-  { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
+  { university_id: 19, course_id: 8, subject_id: 1, grade: 'A' },
+  { university_id: 19, course_id: 8, subject_id: nil, grade: 'A' },
+  { university_id: 19, course_id: 8, subject_id: nil, grade: 'B' },
   # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' },
+  { university_id: 19, course_id: 9, subject_id: 1, grade: 'A' },
+  { university_id: 19, course_id: 9, subject_id: nil, grade: 'A' },
+  { university_id: 19, course_id: 9, subject_id: nil, grade: 'B' },
 
-  # Nottingham university_id: 10
-  # medicine course_id: 1
-  { university_id: 10, course_id: 1, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 6, grade: 'A' },
+  # Coventry university_id: 20
+  # medicine course_id: 1 NA
   # business Management course_id: 2
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'B' },
+  { university_id: 20, course_id: 2, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 2, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 2, subject_id: nil, grade: 'B' },
   # computer science course_id: 3
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  # Pharmacology course_id: 4
-  { university_id: 10, course_id: 4, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 3, subject_id: nil, grade: 'A' },
+  # Pharmacology course_id: 4 NA
   # English course_id: 5
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: 3, grade: 'B' },
+  { university_id: 20, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 5, subject_id: 3, grade: 'B' },
   # Architecture course_id: 6
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 6, subject_id: 1, grade: 'A' },
+  { university_id: 20, course_id: 6, subject_id: nil, grade: 'A' },
   # Economics course_id: 7
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A*' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 7, subject_id: nil, grade: 'A*' },
+  { university_id: 20, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 7, subject_id: nil, grade: 'A' },
   # Mathematics course_id: 8
-  { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
+  { university_id: 20, course_id: 8, subject_id: 1, grade: 'A' },
+  { university_id: 20, course_id: 8, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 8, subject_id: nil, grade: 'B' },
   # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' },
+  { university_id: 20, course_id: 9, subject_id: 1, grade: 'A' },
+  { university_id: 20, course_id: 9, subject_id: nil, grade: 'A' },
+  { university_id: 20, course_id: 9, subject_id: nil, grade: 'B' },
 
-  # Nottingham university_id: 10
+  # Liverpool university_id: 21
   # medicine course_id: 1
-  { university_id: 10, course_id: 1, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 6, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
   # business Management course_id: 2
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'B' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
   # computer science course_id: 3
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 3, subject_id: nil, grade: 'A' },
   # Pharmacology course_id: 4
-  { university_id: 10, course_id: 4, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 4, subject_id: 4, grade: 'A' },
+  { university_id: 21, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 4, subject_id: nil, grade: 'A' },
   # English course_id: 5
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: 3, grade: 'B' },
+  { university_id: 21, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 5, subject_id: 3, grade: 'B' },
   # Architecture course_id: 6
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 6, subject_id: 1, grade: 'A' },
+  { university_id: 21, course_id: 6, subject_id: nil, grade: 'A' },
   # Economics course_id: 7
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A*' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 7, subject_id: nil, grade: 'A*' },
+  { university_id: 21, course_id: 7, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 7, subject_id: nil, grade: 'A' },
   # Mathematics course_id: 8
-  { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
+  { university_id: 21, course_id: 8, subject_id: 1, grade: 'A' },
+  { university_id: 21, course_id: 8, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 8, subject_id: nil, grade: 'B' },
   # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' },
-
-  # Nottingham university_id: 10
-  # medicine course_id: 1
-  { university_id: 10, course_id: 1, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 6, grade: 'A' },
+  { university_id: 21, course_id: 9, subject_id: 1, grade: 'A' },
+  { university_id: 21, course_id: 9, subject_id: nil, grade: 'A' },
+  { university_id: 21, course_id: 9, subject_id: nil, grade: 'B' },
+  # Liverpool university_id: 21
+  # medicine course_id: 1 NA
   # business Management course_id: 2
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'B' },
+  { university_id: 22, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 3, subject_id: nil, grade: 'A' },
   # computer science course_id: 3
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  # Pharmacology course_id: 4
-  { university_id: 10, course_id: 4, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 3, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 3, subject_id: nil, grade: 'A' },
+  # Pharmacology course_id: 4 NA
   # English course_id: 5
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: 3, grade: 'B' },
+  { university_id: 22, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 5, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 5, subject_id: 3, grade: 'B' },
   # Architecture course_id: 6
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  # Economics course_id: 7
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A*' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  # Mathematics course_id: 8
-  { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
+  { university_id: 22, course_id: 6, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 6, subject_id: 1, grade: 'A' },
+  { university_id: 22, course_id: 6, subject_id: nil, grade: 'A' },
+  # Economics course_id: 7 NA
+  # Mathematics course_id: 8 NA
   # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' },
-
-  # Nottingham university_id: 10
-  # medicine course_id: 1
-  { university_id: 10, course_id: 1, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 6, grade: 'A' },
-  # business Management course_id: 2
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'B' },
-  # computer science course_id: 3
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  # Pharmacology course_id: 4
-  { university_id: 10, course_id: 4, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  # English course_id: 5
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: 3, grade: 'B' },
-  # Architecture course_id: 6
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  # Economics course_id: 7
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A*' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  # Mathematics course_id: 8
-  { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
-  # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' },
-
-  # Nottingham university_id: 10
-  # medicine course_id: 1
-  { university_id: 10, course_id: 1, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 1, subject_id: 6, grade: 'A' },
-  # business Management course_id: 2
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 2, subject_id: nil, grade: 'B' },
-  # computer science course_id: 3
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 3, subject_id: nil, grade: 'A' },
-  # Pharmacology course_id: 4
-  { university_id: 10, course_id: 4, subject_id: 4, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 4, subject_id: nil, grade: 'A' },
-  # English course_id: 5
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 5, subject_id: 3, grade: 'B' },
-  # Architecture course_id: 6
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 6, subject_id: nil, grade: 'A' },
-  # Economics course_id: 7
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A*' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 7, subject_id: nil, grade: 'A' },
-  # Mathematics course_id: 8
-  { university_id: 10, course_id: 8, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 8, subject_id: nil, grade: 'B' },
-  # History course_id: 9
-  { university_id: 10, course_id: 9, subject_id: 1, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'A' },
-  { university_id: 10, course_id: 9, subject_id: nil, grade: 'B' }
+  { university_id: 22, course_id: 9, subject_id: 1, grade: 'A' },
+  { university_id: 22, course_id: 9, subject_id: nil, grade: 'A' },
+  { university_id: 22, course_id: 9, subject_id: nil, grade: 'B' }
 ]
 
 UniversityCourseSubject.create(university_course_subjects)
