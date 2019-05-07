@@ -1,0 +1,2 @@
+class UniversityCourseSubject < ApplicationRecord
+end
