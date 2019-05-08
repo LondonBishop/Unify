@@ -5,8 +5,8 @@ export default class LogIn extends React.Component {
   render (){
     return (
       <div>
-        <h4 className="ui dividing header">Log In</h4>
         <form className="ui form">
+          <h4 className="ui dividing header">Log In</h4>
           <div className="field">
             <label>Name</label>
             <input type="text" name="name" placeholder="Name" />
