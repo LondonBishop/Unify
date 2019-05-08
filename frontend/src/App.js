@@ -24,7 +24,7 @@ export default class App extends Component {
     .then(r => r.json())
     .then(courses => this.setState({courses}))
   }
-  
+
   handleSignUpClick= () => {
     this.setState({
       signUpClick: !this.state.signUpClick,
@@ -39,19 +39,27 @@ export default class App extends Component {
     })
   }
 
+  handleLogoutClick = () => {
+    this.setState({
+      loginClick: false,
+      signUpClick: false,
+      student: null
+    })
+  }
+
   setStudent = (student) => {
     this.setState({student})
   }
 
   render() {
     const {signUpClick, loginClick, student} = this.state
-    const {handleLoginClick, handleSignUpClick, handleSignUpSubmit, handleChange} = this
+    const {handleLoginClick, handleSignUpClick, handleLogoutClick} = this
     return (
       <div className="App">
-          <Nav handleLoginClick={handleLoginClick} handleSignUpClick={handleSignUpClick}/>
-          {(signUpClick && !student) ? <SignUp setState={this.setState}/> : null}
+          <Nav student={student} handleLoginClick={handleLoginClick} handleLogoutClick={handleLogoutClick} handleSignUpClick={handleSignUpClick}/>
+          {(signUpClick && !student) ? <SignUp setStudent={this.setStudent}/> : null}
           {(loginClick && !student) ? <LogIn handleLoginClick /> : null}
-         {student ? <MainContainer /> : <Splash />}
+         {student ? <MainContainer student={student}/> : <Splash />}
           {/* <Footer /> */}
       </div>
     );

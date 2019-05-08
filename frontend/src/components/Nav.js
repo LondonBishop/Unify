@@ -3,7 +3,7 @@ import React from 'react'
 export default class Nav extends React.Component {
 
   render (){
-    const {handleSignUpClick, handleLoginClick} = this.props
+    const {handleSignUpClick, handleLoginClick, handleLogoutClick, student} = this.props
     return (
       <div className="ui inverted small menu">
     <a className="active item">
@@ -11,11 +11,11 @@ export default class Nav extends React.Component {
     </a>
     <div className="right menu">
       <div className="item">
-          <div className="ui primary button" onClick={handleSignUpClick}>Sign Up
-          </div>
+          {student ? `Welcome, ${student.name}`: <div className="ui primary button" onClick={handleSignUpClick}>Sign Up
+        </div>}
       </div>
       <div className="item">
-          <div className="ui primary button" onClick={handleLoginClick}>Log In</div>
+          {student ? <div className="ui primary button" onClick={handleLogoutClick}>Log Out</div> : <div className="ui primary button" onClick={handleLoginClick}>Log In</div>}
       </div>
     </div>
   </div>
