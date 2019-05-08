@@ -3,7 +3,7 @@ class UniversitiesController < ApplicationController
 
   # GET /universities
   def index
-    @universities = University.all
+    @universities = University.universities_API
     render json: @universities
   end
 
@@ -43,4 +43,5 @@ class UniversitiesController < ApplicationController
       :location
     )
   end
+
 end

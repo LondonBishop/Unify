@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
 
   # GET /students
   def index
-    @students = Student.all
+    @students = Student.students_API
     render json: @students
   end
 
