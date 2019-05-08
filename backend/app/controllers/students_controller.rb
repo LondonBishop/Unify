@@ -12,6 +12,14 @@ class StudentsController < ApplicationController
     render json: @student
   end
 
+  def login
+    @student = Student.find_by(
+      name: params[:name],
+      ucas_id: params[:ucas_id]
+    )
+    render json: @student
+  end
+
   # POST /students
   def create
     @student = Student.new(student_params)
@@ -43,7 +51,7 @@ class StudentsController < ApplicationController
       :ucas_id,
       :school_name,
       :location,
-      :enrollment_year
+      :enrollment_year,
     )
   end
 end
