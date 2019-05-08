@@ -5,10 +5,10 @@ export default class Profiler extends Component {
 
     render() {
 
-        const { handleSearchClick } = this.props
+        const { handleSearchTermChange, handleSearchClick } = this.props
 
         return (
-            <CourseSearch handleSearchClick={ handleSearchClick } />
+            <CourseSearch handleSearchTermChange={ handleSearchTermChange } handleSearchClick={ handleSearchClick } />
         );
     }
 }
