@@ -9,12 +9,20 @@ import MainContainer from './containers/MainContainer';
 import SignUp from './components/SignUp'
 import LogIn from './components/LogIn'
 
+const COURSES_URL = 'http://localhost:3000/courses'
 export default class App extends Component {
 
   state = {
     signUpClick: false,
     loginClick: false,
-    student: null
+    student: null,
+    courses: []
+  }
+
+  componentDidMount () {
+    fetch(COURSES_URL)
+    .then(r => r.json())
+    .then(courses => this.setState({courses}))
   }
 
   handleSignUpClick= () => {
@@ -31,20 +39,31 @@ export default class App extends Component {
     })
   }
 
-  HandleLoginSuccess = (student) => {
+  handleLogoutClick = () => {
+    this.setState({
+      loginClick: false,
+      signUpClick: false,
+      student: null
+    })
+  }
 
+  setStudent = (student) => {
+    this.setState({student})
   }
 
   render() {
     const {signUpClick, loginClick, student} = this.state
+    const {handleLoginClick, handleSignUpClick, handleLogoutClick} = this
     return (
       <div className="App">
-          <Nav handleLoginClick={this.handleLoginClick} handleSignUpClick={this.handleSignUpClick}/>
-          {(signUpClick && !student) ? <SignUp /> : null}
+          <Nav student={student} handleLoginClick={handleLoginClick} handleLogoutClick={handleLogoutClick} handleSignUpClick={handleSignUpClick}/>
+          {(signUpClick && !student) ? <SignUp setStudent={this.setStudent}/> : null}
           {(loginClick && !student) ? <LogIn handleLoginClick /> : null}
-         {student ? <MainContainer /> : <Splash />}
+         {student ? <MainContainer student={student}/> : <Splash />}
           {/* <Footer /> */}
       </div>
     );
   }
 }
+
+// test
