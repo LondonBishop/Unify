@@ -16,7 +16,8 @@ class Student < ApplicationRecord
         school_name: student.school_name,
         location: student.location,
         enrollment_year: student.enrollment_year,
-        subjects: []
+        subjects: [],
+        saved_courses: []
       }
       @students << hash
       student.student_subjects.each do |ss|
