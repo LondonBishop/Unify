@@ -335,7 +335,7 @@ university_course_subjects = [
   { university_course_id: 21, subject_id: 1, grade: 'A' },
   { university_course_id: 21, subject_id: 1, grade: 'A' },
   # History course_id: 9
-  { university_course_id: 22, subject_id: 89, grade: 'A' },
+  { university_course_id: 22, subject_id: 9, grade: 'A' },
   { university_course_id: 22, subject_id: 1, grade: 'A' },
   { university_course_id: 22, subject_id: 1, grade: 'B' },
 
@@ -834,7 +834,7 @@ university_course_subjects = [
   { university_course_id: 125, subject_id: 1, grade: 'A' },
   { university_course_id: 125, subject_id: 1, grade: 'B' },
   # History course_id: 9
-  { university_course_id: 126, subject_id: 2, grade: 'A' },
+  { university_course_id: 126, subject_id: 9, grade: 'A' },
   { university_course_id: 126, subject_id: 1, grade: 'A' },
   { university_course_id: 126, subject_id: 1, grade: 'B' },
   #
@@ -876,7 +876,7 @@ university_course_subjects = [
   { university_course_id: 135, subject_id: 1, grade: 'A' },
   { university_course_id: 135, subject_id: 1, grade: 'B' },
 
-  # Liverpool university_id: 21
+  # westminster university_id: 22
   # medicine course_id: 1 NA
   # business Management course_id: 2
   { university_course_id: 136, subject_id: 1, grade: 'A' },
@@ -896,11 +896,14 @@ university_course_subjects = [
   { university_course_id: 139, subject_id: 2, grade: 'A' },
   { university_course_id: 139, subject_id: 1, grade: 'A' },
   # Economics course_id: 7 NA
-  # Mathematics course_id: 8 NA
-  # History course_id: 9
+  # Mathematics course_id: 8
   { university_course_id: 140, subject_id: 2, grade: 'A' },
   { university_course_id: 140, subject_id: 1, grade: 'A' },
-  { university_course_id: 140, subject_id: 1, grade: 'B' }
+  { university_course_id: 140, subject_id: 1, grade: 'B' },
+  # History course_id: 9
+  { university_course_id: 141, subject_id: 1, grade: 'A' },
+  { university_course_id: 141, subject_id: 1, grade: 'A' },
+  { university_course_id: 141, subject_id: 1, grade: 'B' }
 ]
 
 UniversityCourseSubject.create(university_course_subjects)
