@@ -8,7 +8,7 @@ export default class CourseSearch extends Component {
         const {  handleSearchTermChange, handleSearchClick, handleResetClick  } = this.props
 
         return (
-            <div>
+            <div style={ { border : "solid", borderWidth: "1px", padding:"5px" } }>
                 <h3 style={ { marginBottom : "20px", marginTop : "20px" } }><label>Your University Course</label></h3>
 
                 <div class="ui action input">

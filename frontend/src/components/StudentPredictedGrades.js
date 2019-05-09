@@ -20,22 +20,23 @@ export default class StudentPredictedGrades extends Component {
         let value = 0;
 
         return (
-          <div>
+          <div style={ { border : "solid", borderWidth: "1px", padding:"5px" } }>
             <Form>
-              <Form.Group widths='equal'>
+              <Form.Group>
                 <Form.Field control={Input} label='Subject Taken' placeholder='Enter Subject Taken' value={ predictedGrades[0].subject_name }/>
                 <Form.Field control={Select} label='Grade' options={options} placeholder='Grade' value={predictedGrades[0].grade }/>
-               
               </Form.Group>
-              <Form.Group widths='equal'>
+
+              <Form.Group>
                 <Form.Field control={Input}  placeholder='Enter Subject Taken' value={ predictedGrades[1].subject_name }/>
                 <Form.Field control={Select} options={options} placeholder='Grade' value={predictedGrades[1].grade } />
-               
               </Form.Group>
-              <Form.Group widths='equal'>
+
+              <Form.Group>
                 <Form.Field control={Input}  placeholder='Enter Subject Taken' value={ predictedGrades[2].subject_name } />
                 <Form.Field control={Select} options={options} placeholder='Grade' value={predictedGrades[1].grade }/>
               </Form.Group>
+
               <p>
               <Form.Field control={Button}>Save</Form.Field>
               </p>

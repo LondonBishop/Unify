@@ -15,9 +15,11 @@ export default class StudentUnis extends Component {
         return ( 
             <div>
                 <div class="ui grid">
-                    <div class="three column row">
+                    <div class="three column row"></div>
+                    <div class="ten column row">
                         {sSUnis}
                     </div>
+                    <div class="three column row"></div>
                 </div>    
             </div>
         );

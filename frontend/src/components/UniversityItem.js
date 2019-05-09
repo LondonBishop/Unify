@@ -5,7 +5,7 @@ export default class UniversityItem extends React.Component {
 
   render(){
 
-    const { university } = this.props
+    const { university, handleUniClick } = this.props
     
     return (
 
@@ -14,7 +14,7 @@ export default class UniversityItem extends React.Component {
             <img src={university.src} alt='university pic'/>
           </a>
           <div className="content">
-            <a className="header">{ university.name }</a>
+            <a className="header" onClick={ (e) => { handleUniClick(university) } }>{ university.name }</a>
             <div className="description">
               <p>Location: {university.location}</p>
               <p>Number of Courses Offered: {university.courses.length}</p>

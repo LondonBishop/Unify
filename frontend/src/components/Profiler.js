@@ -22,10 +22,9 @@ export default class Profiler extends Component {
                     />
                 </div>
                 
-                {/* <div class="one wide column"></div> */}
 
                 <div class="seven wide column">
-                    {/* <StudentUnis /> */}
+                    {/* <StudentUnis studentSelectedUnis={ studentSelectedUnis }/>  */}
                     <StudentPredictedGrades predictedGrades={ predictedGrades } />
                 </div>
 

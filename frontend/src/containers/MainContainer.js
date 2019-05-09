@@ -135,6 +135,16 @@ export default class MainContainer extends Component {
         });
     }
 
+    handleUniClick = (objUni) => {
+      // move university from main list to student selected one.
+      console.log("uni selected")
+      let newfilteredUni = filteredUnis.filter( uni => { uni != objUni  } );
+      this.setState( { 
+            filteredUnis: newfilteredUni,
+            selectedUnis : [...selectedUnis, objUni]
+          } );
+    }
+
 
     render() {
         return (
@@ -149,6 +159,7 @@ export default class MainContainer extends Component {
                         />
                     <SearchResults 
                         universities={ this.state.filteredUnis }
+                        handleUniClick={ this.handleUniClick }
                     />
                 </div>
                 <div class="three wide column"></div>
