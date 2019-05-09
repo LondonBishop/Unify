@@ -5,7 +5,7 @@ export default class CourseSearch extends Component {
     
     render() {
 
-        const {  handleSearchTermChange, handleSearchClick  } = this.props
+        const {  handleSearchTermChange, handleSearchClick, handleResetClick  } = this.props
 
         return (
             <div>
@@ -13,7 +13,10 @@ export default class CourseSearch extends Component {
 
                 <div class="ui action input">
                     <input type="text" placeholder="Search..." onChange={ (e) => handleSearchTermChange(e.target.value) } />
-                    <button class="ui button"  onClick={ () =>  handleSearchClick()}>Search</button>
+                    <span>
+                    <button class="ui button"  onClick={ () => handleSearchClick() }>Search</button>
+                    <button class="ui secondary button" onClick={ (e) => handleResetClick(e.target) }>All Universities</button>
+                    </span>
                 </div>
             </div>
         );

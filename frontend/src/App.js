@@ -48,6 +48,7 @@ export default class App extends Component {
     this.setState({student})
   }
 
+
   findStudent = (name, ucas_id) => {
     fetch(LOGIN , 
       {
@@ -61,8 +62,7 @@ export default class App extends Component {
                 })
       })
         .then( resp => resp.json() )
-        .then( student => this.setState( {student} ))
-      
+        .then( student => this.setState( {student} ) )
   }
 
 
