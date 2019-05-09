@@ -12,6 +12,7 @@ import LogIn from './components/LogIn'
 
 const STUDENTS_API = 'http://localhost:3000/students'
 const LOGIN = 'http://localhost:3000/login'
+
 export default class App extends Component {
 
   state = {
@@ -20,12 +21,6 @@ export default class App extends Component {
     student: null,
     courses: []
   }
-
-  // componentDidMount() {
-  //   fetch(STUDENTS_API)
-  //     .then(resp => resp.json())
-  //     .then(students => this.setState({students}))
-  // }
 
   handleSignUpClick= () => {
     this.setState({
@@ -83,5 +78,3 @@ export default class App extends Component {
     );
   }
 }
-
-// test

@@ -3,13 +3,13 @@ class StudentsController < ApplicationController
 
   # GET /students
   def index
-    @students = Student.students_API
-    render json: @students
+    @students = Student.all
+    render json: @students, adapter: :json
   end
 
   # GET /students/1
   def show
-    render json: @student
+    render json: @student, serializer: StudentSerializer
   end
 
   def login
