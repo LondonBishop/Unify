@@ -7,6 +7,7 @@ export default class LogIn extends React.Component {
     ucas_id: null,
   }
 
+
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value})
   }
@@ -16,18 +17,22 @@ export default class LogIn extends React.Component {
     this.props.findStudent(this.state.name, this.state.ucas_id)
   }
 
+
   render (){
+
+    const { handleLoginClick, findStudent } = this.props
+
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className="ui form">
+        <form onSubmit={ this.handleSubmit } className="ui form">
           <h4 className="ui dividing header">Log In</h4>
           <div className="field">
             <label>Name</label>
-            <input onChange={this.handleChange} type="text" name="name" placeholder="Name" />
+            <input onChange={ this.handleChange } type="text" name="name" placeholder="Name" />
           </div>
           <div className="field">
             <label>UCAS ID</label>
-            <input onChange={this.handleChange} type="text" name="ucas_id" placeholder="UCAS ID" />
+            <input onChange={ this.handleChange } type="text" name="ucas_id" placeholder="UCAS ID" />
           </div>
           <button className="ui button" type="submit">Log In</button>
         </form>

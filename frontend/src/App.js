@@ -49,31 +49,44 @@ export default class App extends Component {
   }
 
   findStudent = (name, ucas_id) => {
-    fetch(LOGIN, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      },
-      body: JSON.stringify({
-        name: name,
-        ucas_id: ucas_id
+    fetch(LOGIN , 
+      {
+          method: 'POST',
+          headers: {
+                      'Content-Type': 'application/json'
+                   },
+          body: JSON.stringify({
+                      name: name,
+                      ucas_id: ucas_id
+                })
       })
-    })
-    .then(resp => resp.json())
-    .then(student => this.setState({student}))
+        .then( resp => resp.json() )
+        .then( student => this.setState( {student} ))
+      
   }
+
 
   render() {
     const {signUpClick, loginClick, student} = this.state
     const {handleLoginClick, handleSignUpClick, handleLogoutClick, setStudent, findStudent} = this
+
     return (
       <div className="App">
-          <Nav student={student} handleLoginClick={handleLoginClick} handleLogoutClick={handleLogoutClick} handleSignUpClick={handleSignUpClick}/>
+          <Nav 
+            student={student} 
+            handleLoginClick={handleLoginClick} 
+            handleLogoutClick={handleLogoutClick} 
+            handleSignUpClick={handleSignUpClick}
+            />
+
           {(signUpClick && !student) ? <SignUp setStudent={this.setStudent}/> : null}
-          {(loginClick && !student) ? <LogIn handleLoginClick /> : null}
+
+          {(loginClick && !student) ? <LogIn handleLoginClick={handleLoginClick} findStudent={findStudent} /> : null}
+          
           {student ? <MainContainer student={student}/> : <Splash />}
+          
           {/* <Footer /> */}
+
       </div>
     );
   }
