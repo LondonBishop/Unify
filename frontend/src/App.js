@@ -70,9 +70,9 @@ export default class App extends Component {
     return (
       <div className="App">
           <Nav student={student} handleLoginClick={handleLoginClick} handleLogoutClick={handleLogoutClick} handleSignUpClick={handleSignUpClick}/>
-          {(signUpClick && !student) ? <SignUp setStudent={setStudent}/> : null}
-          {(loginClick && !student) ? <LogIn findStudent={findStudent}/> : null}
-         {student ? <MainContainer student={student}/> : <Splash />}
+          {(signUpClick && !student) ? <SignUp setStudent={this.setStudent}/> : null}
+          {(loginClick && !student) ? <LogIn handleLoginClick /> : null}
+          {student ? <MainContainer student={student}/> : <Splash />}
           {/* <Footer /> */}
       </div>
     );

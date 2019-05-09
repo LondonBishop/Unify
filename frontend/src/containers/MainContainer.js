@@ -84,7 +84,6 @@ export default class MainContainer extends Component {
                                 let tempPredictedGrades = predictedGrades.slice().sort((a,b) => (a.subject > b.subject) ? 1 : -1 )
                                 let tempCourseGrades = course.subjects.slice().sort((a,b) => (a.subject_name > b.subject_name) ? 1 : -1 )
                                
-
                                 let allSubjectsMatched = false;
                                 let index = 0;
 
