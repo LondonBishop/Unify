@@ -138,14 +138,15 @@ export default class MainContainer extends Component {
     handleUniClick = (objUni) => {
       // move university from main list to student selected one.
       console.log("uni selected")
-      let newfilteredUni = filteredUnis.filter( uni => { uni != objUni  } );
+      let newfilteredUni = this.state.filteredUnis.filter( uni => uni != objUni );
+
       this.setState( { 
-            filteredUnis: newfilteredUni,
-            selectedUnis : [...selectedUnis, objUni]
+            filteredUnis : newfilteredUni,
+            // selectedUnis : [...selectedUnis, objUni]
           } );
     }
 
-
+ 
     render() {
         return (
             <div class="ui grid" >
@@ -153,6 +154,7 @@ export default class MainContainer extends Component {
                 <div class="ten wide column" >
                     <Profiler 
                         predictedGrades={ this.props.student.subject_grades }
+                        // selectedUnis={this.state.selectedUnis}
                         handleSearchTermChange={ this.handleSearchTermChange } 
                         handleSearchClick={ this.handleSearchClick } 
                         handleResetClick={ this.handleResetClick }

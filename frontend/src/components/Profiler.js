@@ -7,7 +7,7 @@ export default class Profiler extends Component {
 
     render() {
 
-        const { predictedGrades, handleSearchTermChange, handleSearchClick,  handleResetClick } = this.props
+        const { predictedGrades, selectedUnis, handleSearchTermChange, handleSearchClick,  handleResetClick } = this.props
 
         return (
 
@@ -24,7 +24,7 @@ export default class Profiler extends Component {
                 
 
                 <div class="seven wide column">
-                    {/* <StudentUnis studentSelectedUnis={ studentSelectedUnis }/>  */}
+                    {/* <StudentUnis studentSelectedUnis={ selectedUnis }/>  */}
                     <StudentPredictedGrades predictedGrades={ predictedGrades } />
                 </div>
 
