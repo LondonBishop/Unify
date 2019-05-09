@@ -5,12 +5,14 @@ import SearchResults from '../components/SearchResults'
 import { SearchCategory } from 'semantic-ui-react';
 
 const UNI_API = 'http://localhost:3000/universities'
+
 export default class MainContainer extends Component {
 
   state = {
     universities: [],
-    filteredUnis: [],
-    predictedGrades: [{subject : "English Literature", grade :"A"},{subject : "Physics", grade :"A"},{subject: "Mathematics", grade :"A"} ],
+    courses: [],
+    subjects: [],
+    predictedGrades: [],
     selectedUnis: [],
     searchText: ""
   }

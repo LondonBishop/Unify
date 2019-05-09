@@ -32,7 +32,6 @@ class University < ApplicationRecord
           }
           @unis[i][:courses][j][:subjects] << hash
         end
-
         j += 1
       end
       j = 0

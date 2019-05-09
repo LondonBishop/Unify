@@ -13,7 +13,7 @@ universities = [
 
   { name: 'University of Surrey', location: 'Surrey', src: 'http://personal.ee.surrey.ac.uk/Personal/P.Barnaghi/images/surreylogo.png' }, # 11
   { name: 'University of Sussex', location: 'Sussex', src: 'https://banner2.kisspng.com/20180726/jlg/kisspng-university-of-sussex-logo-master-s-degree-academic-5b5970cb98be65.3633656715325882356257.jpg' },
-  { name: 'University of Winchester', location: 'Winchester', src:'https://i1.wp.com/www.thewinchesterguide.com/wp-content/uploads/2018/10/Square20Logo.png' },
+  { name: 'University of Winchester', location: 'Winchester', src: 'https://i1.wp.com/www.thewinchesterguide.com/wp-content/uploads/2018/10/Square20Logo.png' },
   { name: 'University of Brighton', location: 'Brighton', src: 'https://staff.brighton.ac.uk/reg/doc/PublishingImages/UoB%20logo%20clear.png' },
   { name: 'University College London', location: 'London', src: 'https://www.clipartmax.com/png/middle/326-3262846_university-college-london-logo-medical.png' }, # 15
 
@@ -48,18 +48,19 @@ subjects = [
   { name: 'Mathematics' },
   { name: 'Further Mathematics' },
   { name: 'English Literature' },
-  { name: 'Chemistry' },
-  { name: 'Physics' }, # 5
+  { name: 'Chemistry' }, #5
 
-  { name: 'Biology' }, # 6
+  { name: 'Physics' },
+  { name: 'Biology' },
   { name: 'Human Biology' },
   { name: 'History' },
-  { name: 'Geography' },
+  { name: 'Geography' }, #10
+
   { name: 'Computer Science' },
   { name: 'Computing' },
   { name: 'Politics' },
   { name: 'Design Technology' },
-  { name: 'Art' }
+  { name: 'Art' } #15
 ]
 
 Subject.create(subjects)
@@ -334,7 +335,7 @@ university_course_subjects = [
   { university_course_id: 21, subject_id: 1, grade: 'A' },
   { university_course_id: 21, subject_id: 1, grade: 'A' },
   # History course_id: 9
-  { university_course_id: 22, subject_id: 89, grade: 'A' },
+  { university_course_id: 22, subject_id: 9, grade: 'A' },
   { university_course_id: 22, subject_id: 1, grade: 'A' },
   { university_course_id: 22, subject_id: 1, grade: 'B' },
 
@@ -372,7 +373,7 @@ university_course_subjects = [
   # business Management course_id: 2 NA
   # computer science course_id: 3
   { university_course_id: 29, subject_id: 2, grade: 'A*' },
-  { university_course_id: 29, subject_id: 10, grade: 'A' },
+  { university_course_id: 29, subject_id: 11, grade: 'A' },
   { university_course_id: 29, subject_id: 1, grade: 'A' },
   # Pharmacology course_id: 4 NA
   # English course_id: 5 NA
@@ -430,7 +431,7 @@ university_course_subjects = [
   { university_course_id: 40, subject_id: 1, grade: 'A' },
   # computer science course_id: 3
   { university_course_id: 41, subject_id: 2, grade: 'A' },
-  { university_course_id: 41, subject_id: 10, grade: 'A' },
+  { university_course_id: 41, subject_id: 11, grade: 'A' },
   { university_course_id: 41, subject_id: 1, grade: 'A' },
   # Pharmacology course_id: 4
   { university_course_id: 42, subject_id: 1, grade: 'A' },
@@ -833,7 +834,7 @@ university_course_subjects = [
   { university_course_id: 125, subject_id: 1, grade: 'A' },
   { university_course_id: 125, subject_id: 1, grade: 'B' },
   # History course_id: 9
-  { university_course_id: 126, subject_id: 2, grade: 'A' },
+  { university_course_id: 126, subject_id: 9, grade: 'A' },
   { university_course_id: 126, subject_id: 1, grade: 'A' },
   { university_course_id: 126, subject_id: 1, grade: 'B' },
   #
@@ -875,7 +876,7 @@ university_course_subjects = [
   { university_course_id: 135, subject_id: 1, grade: 'A' },
   { university_course_id: 135, subject_id: 1, grade: 'B' },
 
-  # Liverpool university_id: 21
+  # westminster university_id: 22
   # medicine course_id: 1 NA
   # business Management course_id: 2
   { university_course_id: 136, subject_id: 1, grade: 'A' },
@@ -895,11 +896,40 @@ university_course_subjects = [
   { university_course_id: 139, subject_id: 2, grade: 'A' },
   { university_course_id: 139, subject_id: 1, grade: 'A' },
   # Economics course_id: 7 NA
-  # Mathematics course_id: 8 NA
-  # History course_id: 9
+  # Mathematics course_id: 8
   { university_course_id: 140, subject_id: 2, grade: 'A' },
   { university_course_id: 140, subject_id: 1, grade: 'A' },
-  { university_course_id: 140, subject_id: 1, grade: 'B' }
+  { university_course_id: 140, subject_id: 1, grade: 'B' },
+  # History course_id: 9
+  { university_course_id: 141, subject_id: 1, grade: 'A' },
+  { university_course_id: 141, subject_id: 1, grade: 'A' },
+  { university_course_id: 141, subject_id: 1, grade: 'B' }
 ]
 
 UniversityCourseSubject.create(university_course_subjects)
+
+
+###########################SAMPLE STUDENTS##########################################
+students = [
+  { name: 'Mariam', ucas_id: 1234, school_name: 'Test School', location: 'London', enrollment_year: '2019' },
+  { name: 'Harry', ucas_id: 1235, school_name: 'Test School', location: 'London', enrollment_year: '2019' },
+  { name: 'Alex', ucas_id: 1236, school_name: 'Test School', location: 'London', enrollment_year: '2019' }
+]
+
+Student.create(students)
+
+student_subjects = [
+  { student_id: 1, subject_id: 2, grade: 'A' },
+  { student_id: 1, subject_id: 5, grade: 'B' },
+  { student_id: 1, subject_id: 6, grade: 'A' },
+
+  { student_id: 2, subject_id: 2, grade: 'A' },
+  { student_id: 2, subject_id: 5, grade: 'B' },
+  { student_id: 2, subject_id: 11, grade: 'A' },
+
+  { student_id: 3, subject_id: 3, grade: 'A' },
+  { student_id: 3, subject_id: 5, grade: 'B' },
+  { student_id: 3, subject_id: 6, grade: 'A*' }
+]
+
+StudentSubject.create(student_subjects)
