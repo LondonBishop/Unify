@@ -9,7 +9,7 @@ export default class CourseSearch extends Component {
 
         return (
             <div>
-                <h2><label style={ { margin : "100px"} }>Your University Course</label></h2>
+                <h3 style={ { marginBottom : "20px", marginTop : "20px" } }><label>Your University Course</label></h3>
 
                 <div class="ui action input">
                     <input type="text" placeholder="Search..." onChange={ (e) => handleSearchTermChange(e.target.value) } />

@@ -1,23 +1,34 @@
 import React, { Component } from 'react';
 import CourseSearch from './CourseSearch';
 import StudentUnis from './StudentUnis';
+import StudentPredictedGrades from './StudentPredictedGrades'
 
 export default class Profiler extends Component {
 
     render() {
 
-        const { handleSearchTermChange, handleSearchClick,  handleResetClick } = this.props
+        const { predictedGrades, handleSearchTermChange, handleSearchClick,  handleResetClick } = this.props
 
         return (
-            <div>
-                <CourseSearch 
-                        handleSearchTermChange={ handleSearchTermChange } 
-                        handleSearchClick={ handleSearchClick } 
-                        handleResetClick={ handleResetClick } 
-                />
 
-                {/* <StudentUnis /> */}
-                {/* <StuduntPredictedGrades /> */}
+            <div class="ui grid" >
+
+
+                <div class="eight wide column">
+                    <CourseSearch 
+                            handleSearchTermChange={ handleSearchTermChange } 
+                            handleSearchClick={ handleSearchClick } 
+                            handleResetClick={ handleResetClick } 
+                    />
+                </div>
+                
+                {/* <div class="one wide column"></div> */}
+
+                <div class="seven wide column">
+                    {/* <StudentUnis /> */}
+                    <StudentPredictedGrades predictedGrades={ predictedGrades } />
+                </div>
+
             </div>
         );
     }

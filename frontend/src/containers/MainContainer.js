@@ -138,15 +138,20 @@ export default class MainContainer extends Component {
 
     render() {
         return (
-            <div>
-            <Profiler 
-                handleSearchTermChange={ this.handleSearchTermChange } 
-                handleSearchClick={ this.handleSearchClick } 
-                handleResetClick={ this.handleResetClick }
-                />
-            <SearchResults 
-                universities={ this.state.filteredUnis }
-            />
+            <div class="ui grid" >
+                <div class="three wide column"></div>
+                <div class="ten wide column" >
+                    <Profiler 
+                        predictedGrades={ this.props.student.subject_grades }
+                        handleSearchTermChange={ this.handleSearchTermChange } 
+                        handleSearchClick={ this.handleSearchClick } 
+                        handleResetClick={ this.handleResetClick }
+                        />
+                    <SearchResults 
+                        universities={ this.state.filteredUnis }
+                    />
+                </div>
+                <div class="three wide column"></div>
             </div>
         );
     }
