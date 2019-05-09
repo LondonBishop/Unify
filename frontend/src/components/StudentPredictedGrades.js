@@ -40,7 +40,7 @@ export default class StudentPredictedGrades extends Component {
               <Form.Field control={Button}>Save</Form.Field>
               </p>
 
-              <Form.Group inline>
+              {/* <Form.Group inline>
                 <label>Grade</label>
                 <Form.Field
                   control={Radio}
@@ -77,12 +77,12 @@ export default class StudentPredictedGrades extends Component {
                   checked={value === 'U'}
                   onChange={this.handleChange}
                 />
-              </Form.Group>
+              </Form.Group> */}
 
               
             </Form>
 
-            <Grid.Column>
+            {/* <Grid.Column>
                <Table attached='bottom' celled>
             <Table.Header>
               <Table.HeaderCell>Subject Taken</Table.HeaderCell>
@@ -107,7 +107,7 @@ export default class StudentPredictedGrades extends Component {
               </Table.Row>
             </Table.Body>
           </Table>
-        </Grid.Column>
+        </Grid.Column> */}
     </div>
 
           );
