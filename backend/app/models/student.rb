@@ -1,10 +1,10 @@
+require 'pry'
 class Student < ApplicationRecord
   has_many :student_courses
   has_many :courses, through: :student_courses
 
   has_many :student_subjects
   has_many :subjects, through: :student_subjects
-  # test
 
   def self.students_API
     @students = []
@@ -33,4 +33,19 @@ class Student < ApplicationRecord
     end
     @students
   end
+
+  def buildStudent
+    @student = self
+    self.student_subjects.each do |ss|
+      hash = {
+        subject_id: ss.subject_id,
+        subject_name: ss.subject.name,
+        grade: ss.grade
+      }
+      @student[:subjects] << hash
+    end
+    @student
+    binding.pry
+  end
+
 end
