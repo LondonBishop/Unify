@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+
 import './App.css';
+
 import Nav from './components/Nav';
 import Splash from './components/Splash'
 //import Footer from './components/Footer'
@@ -9,7 +10,9 @@ import MainContainer from './containers/MainContainer';
 import SignUp from './components/SignUp'
 import LogIn from './components/LogIn'
 
-const COURSES_URL = 'http://localhost:3000/courses'
+const STUDENTS_API = 'http://localhost:3000/students'
+const LOGIN = 'http://localhost:3000/login'
+
 export default class App extends Component {
 
   state = {
@@ -17,12 +20,6 @@ export default class App extends Component {
     loginClick: false,
     student: null,
     courses: []
-  }
-
-  componentDidMount () {
-    fetch(COURSES_URL)
-    .then(r => r.json())
-    .then(courses => this.setState({courses}))
   }
 
   handleSignUpClick= () => {
@@ -51,19 +48,33 @@ export default class App extends Component {
     this.setState({student})
   }
 
+  findStudent = (name, ucas_id) => {
+    fetch(LOGIN, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        ucas_id: ucas_id
+      })
+    })
+    .then(resp => resp.json())
+    .then(student => this.setState({student}))
+  }
+
   render() {
     const {signUpClick, loginClick, student} = this.state
-    const {handleLoginClick, handleSignUpClick, handleLogoutClick} = this
+    const {handleLoginClick, handleSignUpClick, handleLogoutClick, setStudent, findStudent} = this
     return (
       <div className="App">
           <Nav student={student} handleLoginClick={handleLoginClick} handleLogoutClick={handleLogoutClick} handleSignUpClick={handleSignUpClick}/>
-          {(signUpClick && !student) ? <SignUp setStudent={this.setStudent}/> : null}
-          {(loginClick && !student) ? <LogIn handleLoginClick /> : null}
+          {(signUpClick && !student) ? <SignUp setStudent={setStudent}/> : null}
+          {(loginClick && !student) ? <LogIn findStudent={findStudent}/> : null}
          {student ? <MainContainer student={student}/> : <Splash />}
           {/* <Footer /> */}
       </div>
     );
   }
 }
-
-// test

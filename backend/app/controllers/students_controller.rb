@@ -3,12 +3,20 @@ class StudentsController < ApplicationController
 
   # GET /students
   def index
-    @students = Student.students_API
-    render json: @students
+    @students = Student.all
+    render json: @students, adapter: :json
   end
 
   # GET /students/1
   def show
+    render json: @student, serializer: StudentSerializer
+  end
+
+  def login
+    @student = Student.find_by(
+      name: params[:name],
+      ucas_id: params[:ucas_id]
+    )
     render json: @student
   end
 
@@ -43,7 +51,7 @@ class StudentsController < ApplicationController
       :ucas_id,
       :school_name,
       :location,
-      :enrollment_year
+      :enrollment_year,
     )
   end
 end
