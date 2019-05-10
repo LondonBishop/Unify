@@ -20,11 +20,12 @@ export default class Profiler extends Component {
                             handleSearchClick={ handleSearchClick } 
                             handleResetClick={ handleResetClick } 
                     />
+                    <StudentUnis studentSelectedUnis={ selectedUnis }/> 
                 </div>
                 
 
                 <div class="seven wide column">
-                    {/* <StudentUnis studentSelectedUnis={ selectedUnis }/>  */}
+                    
                     <StudentPredictedGrades predictedGrades={ predictedGrades } />
                 </div>
 

@@ -138,12 +138,18 @@ export default class MainContainer extends Component {
     handleUniClick = (objUni) => {
       // move university from main list to student selected one.
       console.log("uni selected")
-      let newfilteredUni = this.state.filteredUnis.filter( uni => uni != objUni );
+      if (this.state.selectedUnis.length < 5) {
 
-      this.setState( { 
-            filteredUnis : newfilteredUni,
-            // selectedUnis : [...selectedUnis, objUni]
-          } );
+            let newfilteredUni = this.state.filteredUnis.filter( uni => uni != objUni );
+            
+            this.setState( { 
+                  filteredUnis : newfilteredUni,
+                  selectedUnis : [...this.state.selectedUnis, objUni]
+                } );
+        } else {
+          alert("UCAS system only allows a maximum of 5 universties to apply to.");
+        }
+
     }
 
  
@@ -154,7 +160,7 @@ export default class MainContainer extends Component {
                 <div class="ten wide column" >
                     <Profiler 
                         predictedGrades={ this.props.student.subject_grades }
-                        // selectedUnis={this.state.selectedUnis}
+                        selectedUnis={this.state.selectedUnis}
                         handleSearchTermChange={ this.handleSearchTermChange } 
                         handleSearchClick={ this.handleSearchClick } 
                         handleResetClick={ this.handleResetClick }
