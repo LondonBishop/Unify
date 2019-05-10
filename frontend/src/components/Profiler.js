@@ -8,33 +8,33 @@ export default class Profiler extends Component {
 
     render() {
 
-        const { predictedGrades, selectedUnis, handleSearchTermChange, handleSearchClick,  handleResetClick } = this.props
+        const { predictedGrades, selectedUnis, handleSearchTermChange, handleSearchClick,  handleResetClick, removeSelectedUni } = this.props
 
         return (
             <div>
             <div class="ui grid" >
 
                 <div class="eight wide column">
-                    <CourseSearch 
-                            handleSearchTermChange={ handleSearchTermChange } 
-                            handleSearchClick={ handleSearchClick } 
-                            handleResetClick={ handleResetClick } 
+                    <CourseSearch
+                            handleSearchTermChange={ handleSearchTermChange }
+                            handleSearchClick={ handleSearchClick }
+                            handleResetClick={ handleResetClick }
                     />
-                 
+
                 </div>
-                
+
 
                 <div class="seven wide column">
-                    
+
                     <StudentPredictedGrades predictedGrades={ predictedGrades } />
                 </div>
 
-                <div class="ui row">   
-                    <StudentUnis studentSelectedUnis={ selectedUnis }/> 
+                <div class="ui row">
+                    <StudentUnis studentSelectedUnis={ selectedUnis } removeSelectedUni={removeSelectedUni}/>
                 </div>
 
             </div>
-            
+
             </div>
 
         );

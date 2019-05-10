@@ -39,9 +39,9 @@ export default class MainContainer extends Component {
   matchSubject = (subject, grade) => {
 
     let matchedFlag = false;
-    
-    this.props.student.subject_grades.forEach( subjectline => { 
-        if ( subjectline.subject_name.toLowerCase() === subject.toLowerCase() 
+
+    this.props.student.subject_grades.forEach( subjectline => {
+        if ( subjectline.subject_name.toLowerCase() === subject.toLowerCase()
               && subjectline.grade.toLowerCase() === grade.toLowerCase() ) {
             matchedFlag = true;
         }
@@ -54,7 +54,7 @@ export default class MainContainer extends Component {
   // **************** Event handlers **********************************
 
   handleResetClick = (e) => {
-      this.setState({ 
+      this.setState({
           filteredUnis: this.state.universities,
           searchText : ""
         });
@@ -141,8 +141,8 @@ export default class MainContainer extends Component {
       if (this.state.selectedUnis.length < 5) {
 
             let newfilteredUni = this.state.filteredUnis.filter( uni => uni != objUni );
-            
-            this.setState( { 
+
+            this.setState( {
                   filteredUnis : newfilteredUni,
                   selectedUnis : [...this.state.selectedUnis, objUni]
                 } );
@@ -152,20 +152,34 @@ export default class MainContainer extends Component {
 
     }
 
- 
+    removeSelectedUni = (event) => {
+      // event.preventDefault()
+      // debugger
+      // let uniName= event.target.name
+      // let university = this.state.selectedUnis.filter(uni => uni.name === uniName)
+      //
+      // let unisAfterRemove = this.state.selectedUnis.filter(uni => uni !== university)
+      // this.setState({
+      //   selectedUnis: unisAfterRemove,
+      //   filteredUnis: [...this.state.filteredUnis, university]
+      // })
+
+    }
+
     render() {
         return (
             <div class="ui grid" >
                 <div class="three wide column"></div>
                 <div class="ten wide column" >
-                    <Profiler 
+                    <Profiler
                         predictedGrades={ this.props.student.subject_grades }
                         selectedUnis={this.state.selectedUnis}
-                        handleSearchTermChange={ this.handleSearchTermChange } 
-                        handleSearchClick={ this.handleSearchClick } 
+                        handleSearchTermChange={ this.handleSearchTermChange }
+                        handleSearchClick={ this.handleSearchClick }
                         handleResetClick={ this.handleResetClick }
+                        removeSelectedUni={this.removeSelectedUni}
                         />
-                    <SearchResults 
+                    <SearchResults
                         universities={ this.state.filteredUnis }
                         handleUniClick={ this.handleUniClick }
                     />

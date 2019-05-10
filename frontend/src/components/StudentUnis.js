@@ -5,15 +5,15 @@ import UniversityCard from './UniversityCard'
 import UniversityItem from './UniversityItem'
 
 export default class StudentUnis extends Component {
-    
-   
+
+
     render() {
 
-        const { studentSelectedUnis } = this.props
+        const { studentSelectedUnis, removeSelectedUni } = this.props
 
-        let sSUnis = studentSelectedUnis.map ( studentUni => <UniversityCard studentUni={studentUni} /> )
+        let sSUnis = studentSelectedUnis.map ( studentUni => <UniversityCard studentUni={studentUni} removeSelectedUni={removeSelectedUni}/> )
 
-        return ( 
+        return (
             // <div>
             //     <div class="ui four column doubling stackable grid container">
             //         <div class="three column row"></div>
@@ -21,11 +21,11 @@ export default class StudentUnis extends Component {
             //             {sSUnis}
             //         {/* </div> */}
             //         <div class="three column row"></div>
-            //     </div>    
+            //     </div>
             // </div>
 
             <Form>
-            <Form.Group style={{ height : "10px" }}></Form.Group>    
+            <Form.Group style={{ height : "10px" }}></Form.Group>
             <Form.Group>
                 {sSUnis}
             </Form.Group>
@@ -45,4 +45,3 @@ export default class StudentUnis extends Component {
         );
     }
 }
-
