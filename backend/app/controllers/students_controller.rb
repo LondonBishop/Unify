@@ -37,7 +37,7 @@ class StudentsController < ApplicationController
       subject1 = Subject.find_by(name: student_params[:subject_grades][0][:subject])
       subject2 = Subject.find_by(name: student_params[:subject_grades][1][:subject])
       subject3 = Subject.find_by(name: student_params[:subject_grades][2][:subject])
-  # byebug
+
       student_subject1 = StudentSubject.create(
         student: @student,
         subject: subject1,

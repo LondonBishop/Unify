@@ -20,7 +20,7 @@ export default class StudentPredictedGrades extends Component {
         let value = 0;
 
         return (
-          <div style={ { border : "solid", borderWidth: "1px", padding:"5px" } }>
+          <div className= 'ui container' style={ { border : "solid", borderWidth: "1px", padding:"5px" } }>
             <Form>
               <Form.Group>
                 <Form.Field control={Input} label='Subject Taken' placeholder='Enter Subject Taken' value={ predictedGrades[0].subject_name }/>
@@ -80,7 +80,7 @@ export default class StudentPredictedGrades extends Component {
                 />
               </Form.Group> */}
 
-              
+
             </Form>
 
             {/* <Grid.Column>

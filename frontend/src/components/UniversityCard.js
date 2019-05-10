@@ -5,12 +5,12 @@ export default class UniversityCard extends React.Component {
 
   render (){
 
-      const { studentUni } = this.props
-      debugger
+      const { studentUni, removeSelectedUni } = this.props
+      // debugger
       return (
               // <div>
               //   <img  src={this.props.studentUni.src} alt='university pic' class="ui image" />
-              // </div> 
+              // </div>
               <Card class="column" verticalAlign="middle" style={ {marginRight: "10px"} }>
                 <Card.Content>
                     <Image floated='right' size='mini' src={studentUni.src} />
@@ -20,16 +20,16 @@ export default class UniversityCard extends React.Component {
                       Molly wants to add you to the group <strong>musicians</strong>
                     </Card.Description> */}
               </Card.Content>
-              
+
               <Card.Content extra>
                   <div className='ui one buttons'>
-                      <Button basic color='red'>
+                      <Button onClick={event => removeSelectedUni(event)} basic color='red' name={studentUni.name}>
                         Remove
                       </Button>
                   </div>
               </Card.Content>
             </Card>
-              
+
 
           )
   }

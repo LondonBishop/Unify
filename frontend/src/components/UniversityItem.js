@@ -43,7 +43,7 @@ export default class UniversityItem extends React.Component {
       //         </Item.Extra>
       //       </Item.Content>
       //     </Item>
-  
+
       //     <Item>
       //       <Item.Image src='/images/wireframe/image.png' />
       //       <Item.Content>
