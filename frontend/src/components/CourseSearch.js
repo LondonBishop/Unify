@@ -5,15 +5,18 @@ export default class CourseSearch extends Component {
     
     render() {
 
-        const {  handleSearchTermChange, handleSearchClick  } = this.props
+        const {  handleSearchTermChange, handleSearchClick, handleResetClick  } = this.props
 
         return (
-            <div>
-                <h2><label style={ { margin : "100px"} }>Your University Course</label></h2>
+            <div style={ { border : "solid", borderWidth: "1px", padding:"5px" } }>
+                <h3 style={ { marginBottom : "20px", marginTop : "20px" } }><label>Your University Course</label></h3>
 
                 <div class="ui action input">
                     <input type="text" placeholder="Search..." onChange={ (e) => handleSearchTermChange(e.target.value) } />
-                    <button class="ui button"  onClick={ () =>  handleSearchClick()}>Search</button>
+                    <span>
+                    <button class="ui button"  onClick={ () => handleSearchClick() }>Search</button>
+                    <button class="ui secondary button" onClick={ (e) => handleResetClick(e.target) }>All Universities</button>
+                    </span>
                 </div>
             </div>
         );

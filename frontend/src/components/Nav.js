@@ -23,23 +23,3 @@ export default class Nav extends React.Component {
   }
 }
 
-
-
-
-
-
-// <nav className="ui huge inverted secondary menu">
-//   <menu className="left item">
-//     <a href='#' className="logo item">Unify</a>
-//   </menu>
-//   <menu className="right item">
-//     <a href='#' className="item">a</a>
-//     <a href='#' className="item">b</a>
-//     <a href='#' className="item">c</a>
-//     <a href='#' className="item">d</a>
-//   </menu>
-//   <menu className="right item">
-//     <a href='#' className="item"><i className="user icon"></i>Account</a>
-//     <span className='item sidebar'><i className="sidebar icon"></i></span>
-// </menu>
-// </nav>

@@ -3,7 +3,9 @@ import React from 'react'
 export default class Splash extends React.Component {
 
   render (){
+    
     return (
+    
       <div>
         <img src={require('../logo.png')} alt= 'splash'/>
         <div className="ui hidden divider"></div>
