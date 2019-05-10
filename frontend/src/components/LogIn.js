@@ -23,8 +23,9 @@ export default class LogIn extends React.Component {
     const { handleLoginClick, findStudent } = this.props
 
     return (
-      <div>
-        <form onSubmit={ this.handleSubmit } className="ui form">
+      <div className="ui right floated segment">
+        <form onSubmit={this.handleSubmit} className="ui form">
+
           <h4 className="ui dividing header">Log In</h4>
           <div className="field">
             <label>Name</label>

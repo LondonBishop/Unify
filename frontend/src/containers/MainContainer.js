@@ -46,7 +46,7 @@ export default class MainContainer extends Component {
             matchedFlag = true;
         }
      })
-  
+
      return matchedFlag;
   }
 
@@ -72,56 +72,56 @@ export default class MainContainer extends Component {
         let matchUnis = [];
 
         // Get all course from uni that match search text
-         universities.forEach( uni => { 
+         universities.forEach( uni => {
 
               uni.courses.forEach(course => {
-                  
+
                  // match course
                  if( course.course_name.toLowerCase().includes(this.state.searchText.toLowerCase() ) ) {
 
                     //match subjects & grades
-                    
+
                     // order by grades
                     let tempPredictedGrades = subject_grades.slice().sort((a,b) => (a.grade > b.grade) ? 1 : -1 );
                     let tempCourseGrades = course.subjects.slice().sort((a,b) => (a.minimum_grade > b.minimum_grade) ? 1 : -1 );
 
                     if (
-                        ( tempPredictedGrades[0].grade.toLowerCase() === tempCourseGrades[0].minimum_grade.toLowerCase() || 
-                          tempPredictedGrades[0].grade.toLowerCase() < tempCourseGrades[0].minimum_grade.toLowerCase()) 
-                        && (tempPredictedGrades[1].grade.toLowerCase() === tempCourseGrades[1].minimum_grade.toLowerCase() || 
-                            tempPredictedGrades[1].grade.toLowerCase() < tempCourseGrades[1].minimum_grade.toLowerCase()) 
-                        && (tempPredictedGrades[2].grade.toLowerCase() === tempCourseGrades[2].minimum_grade.toLowerCase() || 
+                        ( tempPredictedGrades[0].grade.toLowerCase() === tempCourseGrades[0].minimum_grade.toLowerCase() ||
+                          tempPredictedGrades[0].grade.toLowerCase() < tempCourseGrades[0].minimum_grade.toLowerCase())
+                        && (tempPredictedGrades[1].grade.toLowerCase() === tempCourseGrades[1].minimum_grade.toLowerCase() ||
+                            tempPredictedGrades[1].grade.toLowerCase() < tempCourseGrades[1].minimum_grade.toLowerCase())
+                        && (tempPredictedGrades[2].grade.toLowerCase() === tempCourseGrades[2].minimum_grade.toLowerCase() ||
                             tempPredictedGrades[2].grade.toLowerCase() < tempCourseGrades[2].minimum_grade.toLowerCase())  ) {
 
                                 //test subject requirement.
                                 // order by subject and test.
                                 let tempPredictedGrades = subject_grades.slice().sort((a,b) => (a.subject > b.subject) ? 1 : -1 )
                                 let tempCourseGrades = course.subjects.slice().sort((a,b) => (a.subject_name > b.subject_name) ? 1 : -1 )
-                               
+
                                 let allSubjectsMatched = false;
                                 let index = 0;
 
                                 while (index < tempCourseGrades.length && allSubjectsMatched === false) {
                                     if ( tempCourseGrades[index].subject_name !== "*" ) {
                                         allSubjectsMatched = this.matchSubject(tempCourseGrades[index].subject_name, tempCourseGrades[index].minimum_grade)
-                                    } 
+                                    }
 
                                     index++;
-                                }  
+                                }
 
                                 if (allSubjectsMatched) {
                                     matchUnis.push(uni);
                                 }
-        
+
 
                         }
-                
+
                  }
 
               })
         })
 
-        this.setState( { 
+        this.setState( {
           filteredUnis : matchUnis
         });
 

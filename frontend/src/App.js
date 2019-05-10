@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import './App.css';
 
 import Nav from './components/Nav';
 import Splash from './components/Splash'
-//import Footer from './components/Footer'
-import { button } from 'semantic-ui-react'
+import Footer from './components/Footer'
+import {button} from 'semantic-ui-react'
 import MainContainer from './containers/MainContainer';
 import SignUp from './components/SignUp'
 import LogIn from './components/LogIn'
@@ -22,26 +22,22 @@ export default class App extends Component {
     courses: []
   }
 
-  handleSignUpClick= () => {
+  handleSignUpClick = () => {
     this.setState({
       signUpClick: !this.state.signUpClick,
       loginClick: false
     })
   }
 
-  handleLoginClick= () => {
+  handleLoginClick = () => {
     this.setState({
       loginClick: !this.state.loginClick,
-      signUpClick: false,
+      signUpClick: false
     })
   }
 
   handleLogoutClick = () => {
-    this.setState({
-      loginClick: false,
-      signUpClick: false,
-      student: null
-    })
+    this.setState({loginClick: false, signUpClick: false, student: null})
   }
 
   setStudent = (student) => {
@@ -79,13 +75,13 @@ export default class App extends Component {
             handleSignUpClick={handleSignUpClick}
             />
 
-          {(signUpClick && !student) ? <SignUp setStudent={this.setStudent}/> : null}
+          {(signUpClick && !student) ? <SignUp setStudent={setStudent}/> : null}
 
           {(loginClick && !student) ? <LogIn handleLoginClick={handleLoginClick} findStudent={findStudent} /> : null}
           
           {student ? <MainContainer student={student}/> : <Splash />}
           
-          {/* <Footer /> */}
+          <Footer />
 
       </div>
     );
