@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Divider } from 'semantic-ui-react';
 import UniversityCard from './UniversityCard'
+import UniversityItem from './UniversityItem'
 
 export default class StudentUnis extends Component {
     
@@ -10,7 +11,7 @@ export default class StudentUnis extends Component {
 
         const { studentSelectedUnis } = this.props
 
-        let sSUnis = studentSelectedUnis.map ( studentUni => <UniversityCard studentUni={studentUni} /> )
+        let sSUnis = studentSelectedUnis.map ( studentUni => <UniversityItem university={studentUni} /> )
 
         return ( 
             <div>
