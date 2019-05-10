@@ -18,7 +18,7 @@ export default class LogIn extends React.Component {
 
   render (){
     return (
-      <div>
+      <div className="ui right floated segment">
         <form onSubmit={this.handleSubmit} className="ui form">
           <h4 className="ui dividing header">Log In</h4>
           <div className="field">

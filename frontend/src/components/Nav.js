@@ -6,19 +6,40 @@ export default class Nav extends React.Component {
     const {handleSignUpClick, handleLoginClick, handleLogoutClick, student} = this.props
     return (
       <div className="ui inverted small menu">
-    <a className="active item">
+      <a href='#' className="active item">
       Unify
-    </a>
-    <div className="right menu">
+      </a>
+      <div className="right menu">
       <div className="item">
-          {student ? `Welcome, ${student.name}`: <div className="ui primary button" onClick={handleSignUpClick}>Sign Up
-        </div>}
+          {student ? `Welcome, ${student.name}`: <button className="ui basic blue button" onClick={handleSignUpClick}>Sign Up
+        </button>}
       </div>
       <div className="item">
-          {student ? <div className="ui primary button" onClick={handleLogoutClick}>Log Out</div> : <div className="ui primary button" onClick={handleLoginClick}>Log In</div>}
+          {student ? <button className="ui basic blue button" onClick={handleLogoutClick}>Log Out</button> : <button className="ui basic blue button" onClick={handleLoginClick}>Log In</button>}
       </div>
-    </div>
-  </div>
+      </div>
+      </div>
     );
   }
 }
+
+
+
+
+
+
+// <nav className="ui huge inverted secondary menu">
+//   <menu className="left item">
+//     <a href='#' className="logo item">Unify</a>
+//   </menu>
+//   <menu className="right item">
+//     <a href='#' className="item">a</a>
+//     <a href='#' className="item">b</a>
+//     <a href='#' className="item">c</a>
+//     <a href='#' className="item">d</a>
+//   </menu>
+//   <menu className="right item">
+//     <a href='#' className="item"><i className="user icon"></i>Account</a>
+//     <span className='item sidebar'><i className="sidebar icon"></i></span>
+// </menu>
+// </nav>

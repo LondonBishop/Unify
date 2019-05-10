@@ -54,7 +54,7 @@ export default class SignUp extends React.Component {
 
   render (){
     return (
-      <div>
+      <div className="ui segment">
         <form className='ui small form' onSubmit={event => this.handleSubmit(event)}>
           <h4 className="ui dividing header">Sign Up</h4>
           <div className="three fields">
@@ -185,7 +185,12 @@ export default class SignUp extends React.Component {
               </select>
             </div>
           </div>
-          <button class="ui button" type="submit">Sign Up</button>
+          <button class="ui basic blue animated button" tabindex='0' type="submit">
+            <div className="visible content">Sign Up</div>
+            <div className="hidden content">
+              <i className="right arrow icon"></i>
+            </div>
+          </button>
         </form>
       </div>
     )
