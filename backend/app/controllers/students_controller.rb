@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  
   before_action :set_student, only: %i[show update]
 
   # GET /students
@@ -11,6 +12,7 @@ class StudentsController < ApplicationController
   def show
     render json: @student, serializer: StudentSerializer
   end
+
 
   def login
     @student = Student.find_by(
