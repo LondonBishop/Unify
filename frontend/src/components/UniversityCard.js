@@ -6,12 +6,12 @@ export default class UniversityCard extends React.Component {
   render (){
 
       const { studentUni } = this.props
-
+      debugger
       return (
               // <div>
               //   <img  src={this.props.studentUni.src} alt='university pic' class="ui image" />
               // </div> 
-              <Card>
+              <Card class="column" verticalAlign="middle" style={ {marginRight: "10px"} }>
                 <Card.Content>
                     <Image floated='right' size='mini' src={studentUni.src} />
                     <Card.Header>{studentUni.name}</Card.Header>
