@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CourseSearch from './CourseSearch';
 import StudentUnis from './StudentUnis';
 import StudentPredictedGrades from './StudentPredictedGrades'
+import { Form } from 'semantic-ui-react';
 
 export default class Profiler extends Component {
 
@@ -10,9 +11,8 @@ export default class Profiler extends Component {
         const { predictedGrades, selectedUnis, handleSearchTermChange, handleSearchClick,  handleResetClick } = this.props
 
         return (
-
+            <div>
             <div class="ui grid" >
-
 
                 <div class="eight wide column">
                     <CourseSearch 
@@ -20,7 +20,7 @@ export default class Profiler extends Component {
                             handleSearchClick={ handleSearchClick } 
                             handleResetClick={ handleResetClick } 
                     />
-                    <StudentUnis studentSelectedUnis={ selectedUnis }/> 
+                 
                 </div>
                 
 
@@ -29,7 +29,14 @@ export default class Profiler extends Component {
                     <StudentPredictedGrades predictedGrades={ predictedGrades } />
                 </div>
 
+                <div class="ui row">   
+                    <StudentUnis studentSelectedUnis={ selectedUnis }/> 
+                </div>
+
             </div>
+            
+            </div>
+
         );
     }
 }
