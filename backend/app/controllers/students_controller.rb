@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  
+
   before_action :set_student, only: %i[show update]
 
   # GET /students
@@ -24,13 +24,44 @@ class StudentsController < ApplicationController
 
   # POST /students
   def create
-    @student = Student.new(student_params)
-    if @student.save
+
+    @student = Student.new(
+      name: student_params[:name],
+      ucas_id: student_params[:ucas_id],
+      school_name: student_params[:school_name],
+      location: student_params[:location],
+      enrollment_year: student_params[:enrollment_year]
+    )
+
+    if @student.save!
+      subject1 = Subject.find_by(name: student_params[:subject_grades][0][:subject])
+      subject2 = Subject.find_by(name: student_params[:subject_grades][1][:subject])
+      subject3 = Subject.find_by(name: student_params[:subject_grades][2][:subject])
+  # byebug
+      student_subject1 = StudentSubject.create(
+        student: @student,
+        subject: subject1,
+        grade: student_params[:subject_grades][0][:grade]
+      )
+
+      student_subject2 = StudentSubject.create(
+        student: @student,
+        subject: subject2,
+        grade: student_params[:subject_grades][1][:grade]
+      )
+
+      student_subject3 = StudentSubject.create(
+        student: @student,
+        subject: subject3,
+        grade: student_params[:subject_grades][2][:grade]
+      )
+
       render json: @student
     else
       render json: @student.errors
     end
   end
+
 
   # PATCH /students/1
   def update
@@ -54,6 +85,11 @@ class StudentsController < ApplicationController
       :school_name,
       :location,
       :enrollment_year,
+      subject_grades: [:subject, :grade]
     )
   end
 end
+
+# :subject_grades,
+# :subject_name,
+# :grade

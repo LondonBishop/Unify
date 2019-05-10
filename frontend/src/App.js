@@ -12,6 +12,7 @@ import LogIn from './components/LogIn'
 
 const STUDENTS_API = 'http://localhost:3000/students'
 const LOGIN = 'http://localhost:3000/login'
+const SUBJECTS_API = 'http://localhost:3000/student_subjects'
 
 export default class App extends Component {
 
@@ -46,7 +47,7 @@ export default class App extends Component {
 
 
   findStudent = (name, ucas_id) => {
-    fetch(LOGIN , 
+    fetch(LOGIN ,
       {
           method: 'POST',
           headers: {
@@ -61,26 +62,41 @@ export default class App extends Component {
         .then( student => this.setState( {student} ) )
   }
 
+  saveStudent = (student) => {
+
+    fetch(STUDENTS_API,
+      {
+        method: 'POST',
+        headers: {
+                    'Content-Type': 'application/json'
+                 },
+        body: JSON.stringify({student})
+      }
+    )
+    .then(resp => resp.json())
+    .then(student => this.setState({student}))
+  }
+
 
   render() {
     const {signUpClick, loginClick, student} = this.state
-    const {handleLoginClick, handleSignUpClick, handleLogoutClick, setStudent, findStudent} = this
+    const {handleLoginClick, handleSignUpClick, handleLogoutClick, setStudent, findStudent, saveStudent} = this
 
     return (
       <div className="App">
-          <Nav 
-            student={student} 
-            handleLoginClick={handleLoginClick} 
-            handleLogoutClick={handleLogoutClick} 
+          <Nav
+            student={student}
+            handleLoginClick={handleLoginClick}
+            handleLogoutClick={handleLogoutClick}
             handleSignUpClick={handleSignUpClick}
             />
 
-          {(signUpClick && !student) ? <SignUp setStudent={setStudent}/> : null}
+          {(signUpClick && !student) ? <SignUp setStudent={setStudent} saveStudent={saveStudent}/> : null}
 
           {(loginClick && !student) ? <LogIn handleLoginClick={handleLoginClick} findStudent={findStudent} /> : null}
-          
+
           {student ? <MainContainer student={student}/> : <Splash />}
-          
+
           <Footer />
 
       </div>

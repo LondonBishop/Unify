@@ -22,6 +22,7 @@ export default class SignUp extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+
     let student = {
       name: this.state.name,
       ucas_id: this.state.ucas_id,
@@ -29,11 +30,13 @@ export default class SignUp extends React.Component {
       school_name: this.state.school_name,
       enrollment_year: this.state.enrollment_year,
       subject_grades: [
-        {subject_1: this.state.subject_1, grade_1: this.state.grade_1},
-        {subject_2: this.state.subject_1, grade_2: this.state.grade_1},
-        {subject_3: this.state.subject_1, grade_3: this.state.grade_1}
+        {subject: this.state.subject_1, grade: this.state.grade_1},
+        {subject: this.state.subject_2, grade: this.state.grade_2},
+        {subject: this.state.subject_3, grade: this.state.grade_3}
       ]
     }
+
+    this.props.saveStudent(student)
 
     this.setState({
       name: null,
@@ -185,7 +188,7 @@ export default class SignUp extends React.Component {
               </select>
             </div>
           </div>
-          <button class="ui basic blue animated button" tabindex='0' type="submit">
+          <button className="ui basic blue animated button" tabindex='0' type="submit">
             <div className="visible content">Sign Up</div>
             <div className="hidden content">
               <i className="right arrow icon"></i>

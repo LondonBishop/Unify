@@ -20,7 +20,7 @@ export default class LogIn extends React.Component {
 
   render (){
 
-    const { handleLoginClick, findStudent } = this.props
+    // const { handleLoginClick, findStudent } = this.props
 
     return (
       <div className="ui right floated segment">
